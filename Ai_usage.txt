@@ -1,0 +1,67 @@
+============================================================
+           AI USAGE DECLARATION
+============================================================
+
+Name: Farhan Taukir Rafin
+Student ID: 22299207
+Assignment: Smart Geo-Tagged Landmarks (CSE 489)
+Date: 15/08/2026
+
+------------------------------------------------------------
+1. AI TOOLS USED (check all that apply)
+------------------------------------------------------------
+[ ] None
+[ ] ChatGPT
+[ ] GitHub Copilot
+[ ] Google Gemini
+[X] Claude
+[ ] Cursor
+[ ] Other: ________________
+
+------------------------------------------------------------
+2. PURPOSE OF AI USE (check all that apply)
+------------------------------------------------------------
+[X] Learning/understanding concepts
+[X] Debugging my code
+[X] Generating code snippets
+[X] Writing text content
+[X] Design/styling ideas
+[ ] Image generation
+[ ] Other: ________________
+
+------------------------------------------------------------
+3. DESCRIPTION OF AI USE
+------------------------------------------------------------
+I declare that AI tools were used in the development of this assignment in the following capacity:
+
+**Claude (Anthropic)** was used as a development assistant throughout the project. Specifically, it was used to generate the initial Flutter implementation of `lib/main.dart`, produce the `pubspec.yaml` configuration and the `AndroidManifest.xml` permission set, and draft the `README.txt` documentation.
+
+It was also used to reason about the architecture before any code was written. The approach adopted was to make SQLite the single source of truth, and to model a visit as one database row that moves through queued -> pending -> done/failed, so that the offline queue (Requirement 8) and the WorkManager job poller (Requirement 10) are served by one mechanism rather than two separate ones.
+
+After the provided API reference was consulted, the networking layer was revised against the documented contract: handling the third `failed` job state so a rejected visit is not polled indefinitely, making the `create_landmark` image optional with the server's 2MB and jpeg/png/webp limits enforced before upload, sending `delete_landmark` and `restore_landmark` as form-urlencoded bodies carrying only `id`, and respecting the `is_active` flag returned by `get_landmarks`.
+
+All AI-generated code was reviewed, understood, and verified by me before inclusion in the submission. I take full responsibility for the final submitted work and am able to explain every part of the codebase.
+
+This declaration is made in the interest of academic transparency and in accordance with BRAC University's guidelines on the ethical use of AI tools in academic work.
+
+------------------------------------------------------------
+4. AI-ASSISTED SECTIONS
+------------------------------------------------------------
+
+File: main.dart             Section: smart_geo_landmarks/lib
+File: pubspec.yaml          Section: smart_geo_landmarks
+File: AndroidManifest.xml   Section: smart_geo_landmarks/android/app/src/main
+File: README.txt            Section: smart_geo_landmarks
+
+------------------------------------------------------------
+5. DECLARATION
+------------------------------------------------------------
+
+I declare that:
+- This disclosure is complete and accurate
+- I understand all code in my submission
+- I can explain and modify my work if asked
+- I take full responsibility for my submission
+
+Signature: Farhan
+Date: 15/08/2026

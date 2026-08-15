@@ -1,0 +1,38 @@
+name: smart_geo_landmarks
+description: CSE 489 - Smart Geo-Tagged Landmarks (student 22299207)
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+  flutter: ">=3.27.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Networking
+  http: ^1.2.0
+
+  # Offline cache / single source of truth
+  sqflite: ^2.3.0
+  path: ^1.9.0
+  path_provider: ^2.1.0
+
+  # Connectivity, location, camera/gallery
+  connectivity_plus: ">=6.0.0 <8.0.0"
+  geolocator: ">=13.0.0 <16.0.0"
+  image_picker: ^1.1.0
+
+  # OpenStreetMap map view - no API key, no billing account required
+  flutter_map: ">=7.0.0 <10.0.0"
+  latlong2: ^0.9.0
+
+  # Guaranteed background work (Android WorkManager under the hood)
+  workmanager: ^0.10.0
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
